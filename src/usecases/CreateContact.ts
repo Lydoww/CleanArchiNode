@@ -1,18 +1,14 @@
 // usecases/CreateContact.ts
 
-import { ContactRepository } from "../infrastructure/persistence/repositories/ContactRepository";
+import { IContactRepository } from "../domain/interfaces/ContactRepository";
 import { Contact } from "../domain/entities/Contact";
 
 export class CreateContact {
-  constructor(private contactRepository: ContactRepository) {}
+  constructor(private contactRepository: IContactRepository) {}
 
   async execute(contactData: Omit<Contact, "id">): Promise<Contact> {
-    const contact = new Contact(
-      null as any, // On laisse PostgreSQL générer l'ID
-      contactData.name,
-      contactData.email,
-      contactData.phone
+    return this.contactRepository.save(
+      new Contact(0, contactData.name, contactData.email, contactData.phone)
     );
-    return this.contactRepository.save(contact);
   }
 }

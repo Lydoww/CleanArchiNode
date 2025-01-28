@@ -1,9 +1,9 @@
 //  usecases/CreateContact.ts
 
-import { ContactRepository } from "../infrastructure/persistence/repositories/ContactRepository";
+import { IContactRepository } from "../domain/interfaces/ContactRepository";
 
 export class DeleteContact {
-  constructor(private contactRepository: ContactRepository) {}
+  constructor(private contactRepository: IContactRepository) {}
 
   async execute(id: number): Promise<void> {
     await this.contactRepository.delete(id);
