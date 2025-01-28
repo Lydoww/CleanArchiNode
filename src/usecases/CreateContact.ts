@@ -1,3 +1,5 @@
+// usecases/CreateContact.ts
+
 import { ContactRepository } from "../infrastructure/persistence/repositories/ContactRepository";
 import { Contact } from "../domain/entities/Contact";
 

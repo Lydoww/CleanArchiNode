@@ -1,4 +1,4 @@
-// 📂 infrastructure/config/db.ts
+// infrastructure/config/db.ts
 import { Pool } from "pg";
 import dotenv from "dotenv";
 

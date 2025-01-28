@@ -1,9 +1,11 @@
+// src/application/controllers/ContactController.ts
+
 import { Request, Response } from "express";
 import { CreateContact } from "../../usecases/CreateContact";
 import { DeleteContact } from "../../usecases/DeleteContact";
 import { ContactRepository } from "../../infrastructure/persistence/repositories/ContactRepository";
 
-export class ContactController { // ✅ NE PAS mettre `export default`
+export class ContactController {
   private createContact: CreateContact;
   private deleteContact: DeleteContact;
 

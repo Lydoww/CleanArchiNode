@@ -1,3 +1,5 @@
+// infrastructure/middleware/errorHandler.ts
+
 import { Request, Response, NextFunction } from "express";
 
 export function errorHandler(

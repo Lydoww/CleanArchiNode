@@ -1,7 +1,10 @@
+// persistence/repositories/ContactRepository.ts
+
 import { pool } from "../../config/db";
 import { Contact } from "../../../domain/entities/Contact";
+import { IContactRepository } from "../../../domain/interfaces/ContactRepository";
 
-export class ContactRepository {
+export class ContactRepository implements IContactRepository {
   async save(contact: Contact): Promise<Contact> {
     try {
       const result = await pool.query(
