@@ -5,8 +5,8 @@ describe("DeleteContact - Unit Test", () => {
   const mockRepository: IContactRepository = {
     save: jest.fn(),
     delete: jest.fn(),
-    // getAll: jest.fn(),
-    // getById: jest.fn(),
+    getAll: jest.fn(),
+    getById: jest.fn(),
   };
 
   it("✅ Devrait supprimer un contact avec succès", async () => {
