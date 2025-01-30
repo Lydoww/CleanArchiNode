@@ -1,7 +1,7 @@
 // usecases/CreateContact.ts
 
-import { IContactRepository } from "../domain/interfaces/ContactRepository";
-import { Contact } from "../domain/entities/Contact";
+import { IContactRepository } from "../../domain/interfaces/ContactRepository";
+import { Contact } from "../../domain/entities/Contact";
 
 export class CreateContact {
   constructor(private contactRepository: IContactRepository) {}
